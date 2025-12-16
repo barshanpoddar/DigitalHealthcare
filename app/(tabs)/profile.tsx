@@ -1,7 +1,8 @@
 import { router } from 'expo-router';
 import { signOut } from 'firebase/auth';
 import React from 'react';
-import { Alert, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Alert, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useDispatch, useSelector } from 'react-redux';
 import { auth } from '../../src/services/firebase';
 import { RootState } from '../../src/store';

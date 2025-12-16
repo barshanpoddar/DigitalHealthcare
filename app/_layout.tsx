@@ -3,6 +3,7 @@ import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
 import 'react-native-reanimated';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider, useDispatch, useSelector } from 'react-redux';
 
 import { useColorScheme } from '@/hooks/use-color-scheme';
@@ -63,8 +64,10 @@ function RootLayoutNav() {
 
 export default function RootLayout() {
   return (
-    <Provider store={store}>
-      <RootLayoutNav />
-    </Provider>
+    <SafeAreaProvider>
+      <Provider store={store}>
+        <RootLayoutNav />
+      </Provider>
+    </SafeAreaProvider>
   );
 }
